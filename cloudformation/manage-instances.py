@@ -5,7 +5,7 @@ ec2 = boto3.client('ec2')
 def manage_instances(action):
     filters = [
         {
-            'Name': 'tag:workstation',
+            'Name': 'tag:workstation',    # Especificar el tag correspondiente para identificar las máquinas
             'Values': ['*']
         }
     ]
@@ -24,7 +24,7 @@ def manage_instances(action):
             ec2.stop_instances(InstanceIds=instance_ids)
             print(f'Deteniendo instancias: {instance_ids}')
     else:
-        print("No se encontraron instancias con la etiqueta 'workstation'.")
+        print("No se encontraron instancias con la etiqueta 'workstation'.")    # Especificar el tag utilizado para mostrar en el mensaje
 
 def lambda_handler(event, context):
     action = event['action']
