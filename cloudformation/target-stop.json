@@ -3,7 +3,7 @@
   "Targets": [
     {
       "Id": "1",
-      "Arn": "arn:aws:lambda:us-east-1:666423461342:function:ManageWorkstationInstances",
+      "Arn": "arn:aws:lambda:us-east-1:ACCOUNT_ID:function:ManageWorkstationInstances",
       "Input": "{\"action\":\"stop\"}"
     }
   ]
